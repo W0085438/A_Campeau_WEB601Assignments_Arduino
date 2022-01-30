@@ -1,6 +1,9 @@
 export interface Content{
     id: number;
-    type: string;
-    imageUrl: string;
-    body: string;
+    title: string;
+    description: string;
+    creator: string;
+    imgURL?: string;
+    type?: string;
+    tags?: string[]; 
 }
