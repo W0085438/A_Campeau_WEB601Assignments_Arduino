@@ -3,15 +3,15 @@ import {Content} from "./content-interface";
 
 export class ContentList {
     private _items: Content[];
-    static itemCount = 0;
 
     constructor() {
         this._items = [];
+        //this._items[0] = item;
     }
     get items(): Content[]{
         return this._items;
     }
-    increaseCount() {
-        return ++ContentList.itemCount;
+    addItems() {
+        return this._items.push;
     }
 }
