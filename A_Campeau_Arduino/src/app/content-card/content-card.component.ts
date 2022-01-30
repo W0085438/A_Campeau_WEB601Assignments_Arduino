@@ -17,7 +17,7 @@ export class ContentCardComponent implements OnInit {
     let uno: Content;
     let due: Content;
     let mega: Content;
-    
+
     let boards: ContentList;
     boards = new ContentList(uno);
 
@@ -31,7 +31,7 @@ export class ContentCardComponent implements OnInit {
       type: "Microcontroller"
     },
     due = {
-      id: 0,
+      id: 1,
       title: "DUE",
       description: "Intermediate level board",
       creator: "Arduino",
@@ -39,7 +39,7 @@ export class ContentCardComponent implements OnInit {
       type: "Microcontroller"
     },
     mega = {
-      id: 0,
+      id: 2,
       title: "MEGA",
       description: "Entry level board with expanded IO",
       creator: "Arduino",
