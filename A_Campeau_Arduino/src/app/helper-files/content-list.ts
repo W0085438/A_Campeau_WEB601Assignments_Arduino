@@ -4,14 +4,22 @@ import {Content} from "./content-interface";
 export class ContentList {
     private _items: Content[];
 
-    constructor() {
+    constructor(item: Content) {
         this._items = [];
-        //this._items[0] = item;
+        this._items[0] = item;
     }
     get items(): Content[]{
         return this._items;
     }
-    addItems() {
-        return this._items.push;
+    addItems(item: Content) {
+        return this._items.push();
+    }
+
+    numItems() {
+        return this._items.length;
+    }
+
+    processContent() {
+
     }
 }
