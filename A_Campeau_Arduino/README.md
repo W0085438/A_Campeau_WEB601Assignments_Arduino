@@ -1,3 +1,7 @@
+Adam Campeau 
+
+This application will list various Arduino microcontroller boards, board images, and their specifications.
+
 # ACampeauArduino
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
