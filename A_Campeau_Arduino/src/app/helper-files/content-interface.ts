@@ -1,4 +1,4 @@
-interface Content{
+export interface Content{
     id: number;
     type: string;
     imageUrl: string;
