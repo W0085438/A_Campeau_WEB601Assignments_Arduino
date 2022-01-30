@@ -1,4 +1,5 @@
 //import { Content } from "@angular/compiler/src/render3/r3_ast";
+import { title } from "process";
 import {Content} from "./content-interface"; 
 
 export class ContentList {
@@ -19,7 +20,11 @@ export class ContentList {
         return this._items.length;
     }
 
-    processContent() {
-
+    processContent(item: Content): string {
+        return '<p>' + item.title + '</p>',
+               '<p>' + item.description + '</p>',
+               '<p>' + item.creator + '</p>',
+               '<img>' + item.imgURL + '</>',
+               '<p>' + item.type + '</p>'
     }
 }
