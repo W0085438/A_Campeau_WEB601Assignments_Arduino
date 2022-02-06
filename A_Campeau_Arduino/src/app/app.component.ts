@@ -26,7 +26,7 @@ export class AppComponent {
         title: "MEGA 2560",
         description: "",
         creator: "",
-        imgURL: "",
+        imgURL: "https://cdn.shopify.com/s/files/1/0506/1689/3647/products/A000067_00.front_1000x750.jpg?v=1637830354",
         type: "",
         tags: []      
       },
