@@ -17,7 +17,7 @@ export class AppComponent {
         title: "UNO",
         description: "",
         creator: "",
-        imgURL: "",
+        imgURL: "https://store-usa.arduino.cc/collections/boards/products/arduino-uno-rev3",
         type: "",
         tags: []      
       },
