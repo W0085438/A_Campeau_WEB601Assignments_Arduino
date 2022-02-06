@@ -3,18 +3,18 @@
     display: block;
     width: 500px;
     margin: 15px 5px;
-    border: 1px solid transparent;
 
     .container {
         clear: both;
         margin: 0 auto;
-        text-align: center;
+        text-align: left;
+        padding-left: 10px;
     }
 
     img {
-        width: 75%;
-        height: 75%;
-        margin-top: 5px;
+        width: 70%;
+        height: 70%;
+        margin-top: 10px;
     }
 
     img:hover {
@@ -25,7 +25,6 @@
         margin: 0;
         padding-bottom: 5px;
         font-weight: bold;
-        font-size: 24px;
     }
 
     div.desc {
