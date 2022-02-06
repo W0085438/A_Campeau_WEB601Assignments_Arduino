@@ -1,6 +1,5 @@
 //import { Content } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit } from '@angular/core';
-import { ContentList } from '../helper-files/content-list';
 import {Content} from "../helper-files/content-interface";
 
 
@@ -14,7 +13,7 @@ import {Content} from "../helper-files/content-interface";
 export class ContentCardComponent implements OnInit {
    
   constructor() {
-    let uno: Content;
+    /* let uno: Content;
     let due: Content;
     let mega: Content;
 
@@ -46,7 +45,7 @@ export class ContentCardComponent implements OnInit {
       imgURL: "",
       type: "Microcontroller"
     }
-   }
+   } */
   }
   ngOnInit(): void {
   }
