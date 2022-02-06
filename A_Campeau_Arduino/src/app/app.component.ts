@@ -22,7 +22,7 @@ export class AppComponent {
         tags: []      
       },
       {
-        id: 0,
+        id: 1,
         title: "MEGA 2560",
         description: "Expanded IO board",
         creator: "Arduino",
@@ -31,7 +31,7 @@ export class AppComponent {
         tags: []      
       },
       {
-        id: 0,
+        id: 2,
         title: "DUE",
         description: "Powerful, intermediate board",
         creator: "",
@@ -40,7 +40,7 @@ export class AppComponent {
         tags: []      
       },
       {
-        id: 0,
+        id: 3,
         title: "NANO",
         description: "Small form factor",
         creator: "Arduino",
@@ -49,7 +49,7 @@ export class AppComponent {
         tags: []      
       },
       {
-        id: 0,
+        id: 4,
         title: "LEONARDO",
         description: "Improved connectivity",
         creator: "Arduino",
@@ -57,6 +57,15 @@ export class AppComponent {
         type: "Microcontroller",
         tags: []      
       },
+      {
+        id: 5,
+        title: "ZERO",
+        description: "Intermediate board",
+        creator: "Arduino",
+        imgURL: "https://cdn.shopify.com/s/files/1/0506/1689/3647/products/ABX00003_03.front_92550441-6d96-4e50-9268-5718c39ce4d1_2130x1400.jpg?v=1627483216",
+        type: "Microcontroller",
+        tags: []      
+      }
     ]
   }
 }
