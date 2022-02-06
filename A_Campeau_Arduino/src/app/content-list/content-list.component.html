@@ -2,9 +2,9 @@
     <div class="title"><header>{{ contentItem ? contentItem.title : "" }}</header></div>
     <div class="desc">{{ contentItem ? contentItem.description : "" }}</div>
     <div class="creator">Created by: {{ contentItem ? contentItem.creator : "" }}</div>
-    <div "ngIf="contentItem ? contentItem.type : ''" class="type">Type: {{ contentItem ? contentItem.type : "" }}</div>
-    <div "ngIf="contentItem ? contentItem.tags : ''" class="type">Tags: {{ contentItem ? contentItem.tags : "" }}</div>
-    <div "ngIf="contentItem ? contentItem.imgURL : ''" class="imgURL">
+    <div *ngIf="contentItem ? contentItem.type : ''" class="type">Type: {{ contentItem ? contentItem.type : "" }}</div>
+    <div *ngIf="contentItem ? contentItem.tags : ''" class="tags">Tags: {{ contentItem ? contentItem.tags : "" }}</div>
+    <div *ngIf="contentItem ? contentItem.imgURL : ''" class="imgURL">
         <img [src]="contentItem ? contentItem.imgURL : ''" (click)="clicked()">
     </div>
 </div>
