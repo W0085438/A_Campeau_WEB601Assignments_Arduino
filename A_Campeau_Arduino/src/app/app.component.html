@@ -9,7 +9,12 @@
 
 <div class="searchbox">
   <input type="text" #search>
-  <button>SEARCH!</button>
+  <button (click)="search.value = filter(search.value, contentList)">SEARCH!</button>
+  <div [ngClass]="{'true': search.value='Here are the items of that type...', 
+                   'false': search.value='Sorry, no item of that type exists!'}" 
+                   [innerHTML]="search.value">
+
+  </div>
 </div>
 
 <div class="micro">
