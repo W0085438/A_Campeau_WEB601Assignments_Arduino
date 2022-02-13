@@ -36,7 +36,7 @@ export class AppComponent {
         description: "Powerful, intermediate board",
         creator: "Arduino",
         imgURL: "https://cdn.shopify.com/s/files/1/0506/1689/3647/products/A000062_01.iso_c7d197dc-56b9-4e5e-80fd-6cdc44c007ae_1000x750.jpg?v=1637829938",
-        type: "Microcontroller",
+        type: "",
         tags: []      
       },
       {
@@ -54,7 +54,7 @@ export class AppComponent {
         description: "Improved connectivity",
         creator: "Arduino",
         imgURL: "https://cdn.shopify.com/s/files/1/0506/1689/3647/products/A000057_03.front_710x467.jpg?v=1626444500",
-        type: "Microcontroller",
+        type: "Microcontroller +",
         tags: []      
       },
       {
@@ -64,6 +64,15 @@ export class AppComponent {
         creator: "Arduino",
         imgURL: "https://cdn.shopify.com/s/files/1/0506/1689/3647/products/ABX00003_03.front_92550441-6d96-4e50-9268-5718c39ce4d1_2130x1400.jpg?v=1627483216",
         type: "Microcontroller",
+        tags: []      
+      },
+      {
+        id: 6,
+        title: "ZERO II",
+        description: "Intermediate board",
+        creator: "Arduino",
+        imgURL: "https://cdn.shopify.com/s/files/1/0506/1689/3647/products/ABX00003_03.front_92550441-6d96-4e50-9268-5718c39ce4d1_2130x1400.jpg?v=1627483216",
+        type: "Microcontroller +",
         tags: []      
       }
     ]
