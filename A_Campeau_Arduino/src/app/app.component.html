@@ -7,7 +7,10 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-
+<div class="searchbox">
+  <input type="text" #search>
+  <button>SEARCH!</button>
+</div>
 
 <div class="micro">
   <app-content-list *ngFor="let item of (contentList | filter-content: 'Microcontroller'); index as i; first as isFirst" [contentItem]="item" 
