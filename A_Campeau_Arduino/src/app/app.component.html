@@ -6,29 +6,29 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="container">
+  <div class="searchbox">
+    <input type="text" #search>
+    <button (click)="search.value = filter(search.value, contentList)">SEARCH!</button>
+    <div [ngClass]="{'true': search.value == 'There is a card with that title.', 
+                    'false': search.value == 'There is no card with that title.'}" [innerHTML]="search.value"></div>
+  </div>
 
-<div class="searchbox">
-  <input type="text" #search>
-  <button (click)="search.value = filter(search.value, contentList)">SEARCH!</button>
-  <div [ngClass]="{'true': search.value == 'There is a card with that title.', 
-                  'false': search.value == 'There is no card with that title.'}" [innerHTML]="search.value"></div>
+  <div class="micro">
+    <app-content-list *ngFor="let item of (contentList | contentFilter: 'Microcontroller'); index as i; first as isFirst" [contentItem]="item" 
+    [class.isFirst]="isFirst"></app-content-list>
+  </div>
+
+  <div class="microplus">
+    <app-content-list *ngFor="let item of (contentList | contentFilter: 'Microcontroller+'); index as i; first as isFirst" [contentItem]="item" 
+    [class.isFirst]="isFirst"></app-content-list>
+  </div>
+
+  <div class="empty">
+    <app-content-list *ngFor="let item of (contentList | contentFilter); index as i; first as isFirst" [contentItem]="item" 
+    [class.isFirst]="isFirst"></app-content-list>
+  </div>
 </div>
-
-<div class="micro">
-  <app-content-list *ngFor="let item of (contentList | contentFilter: 'Microcontroller'); index as i; first as isFirst" [contentItem]="item" 
-  [class.isFirst]="isFirst"></app-content-list>
-</div>
-
-<div class="microplus">
-  <app-content-list *ngFor="let item of (contentList | contentFilter: 'Microcontroller+'); index as i; first as isFirst" [contentItem]="item" 
-  [class.isFirst]="isFirst"></app-content-list>
-</div>
-
-<div class="empty">
-  <app-content-list *ngFor="let item of (contentList | contentFilter); index as i; first as isFirst" [contentItem]="item" 
-  [class.isFirst]="isFirst"></app-content-list>
-</div>
-
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
