@@ -18,17 +18,17 @@
 </div>
 
 <div class="micro">
-  <app-content-list *ngFor="let item of (contentList | filter-content: 'Microcontroller'); index as i; first as isFirst" [contentItem]="item" 
+  <app-content-list *ngFor="let item of (contentList | filterContent: 'Microcontroller'); index as i; first as isFirst" [contentItem]="item" 
   [class.isFirst]="isFirst"></app-content-list>
 </div>
 
 <div class="microplus">
-  <app-content-list *ngFor="let item of (contentList | filter-content: 'Microcontroller+'); index as i; first as isFirst" [contentItem]="item" 
+  <app-content-list *ngFor="let item of (contentList | filterContent: 'Microcontroller+'); index as i; first as isFirst" [contentItem]="item" 
   [class.isFirst]="isFirst"></app-content-list>
 </div>
 
 <div class="empty">
-  <app-content-list *ngFor="let item of (contentList | filter-content); index as i; first as isFirst" [contentItem]="item" 
+  <app-content-list *ngFor="let item of (contentList | filterContent); index as i; first as isFirst" [contentItem]="item" 
   [class.isFirst]="isFirst"></app-content-list>
 </div>
 
