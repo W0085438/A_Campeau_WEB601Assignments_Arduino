@@ -77,4 +77,12 @@ export class AppComponent {
       }
     ]
   }
+  filter(cardTitle: string, contentList: Content[]): string {
+    for(let item of contentList){
+      if (cardTitle == item.title){
+        return "There is an item with that title:";
+      }
+    }
+        return "Sorry, there are no items with that title!";
+  }
 }
