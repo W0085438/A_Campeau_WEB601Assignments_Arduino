@@ -1,21 +1,34 @@
 :host {
-    .true {
-        color: green;
+    .container {
+        clear: both;
+        margin: 0 auto;
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 20px;
+      
     }
 
-    .false {
-        color: red;
+    input {
+        margin: 35px;
     }
 
-    .micro {
-        color: orange;
-    }
+  .true {
+    color: green;
+  }
 
-    .microplus {
-        color: blue;
-    }
+  .false {
+    color: red;
+  }
 
-    .empty {
-        color: green;
-    }
+  .micro {
+    color: orange;
+  }
+
+  .microplus {
+    color: blue;
+  }
+
+  .empty {
+    color: black;
+  }
 }
