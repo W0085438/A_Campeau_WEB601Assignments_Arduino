@@ -10,7 +10,7 @@
         text-align: left;
         padding-left: 10px;
         padding-top: 20px;
-        border: 1px solid green;
+        border: 1px solid black;
     }
 
     
@@ -32,6 +32,3 @@
     }
 }
 
-:host.isFirst{
-    border: 2px solid black;
-}
