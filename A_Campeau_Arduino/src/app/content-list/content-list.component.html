@@ -2,9 +2,19 @@
     <div class="title"><header>{{ contentItem ? contentItem.title : "" }}</header></div>
     <div class="desc">{{ contentItem ? contentItem.description : "" }}</div>
     <div class="creator">Created by: {{ contentItem ? contentItem.creator : "" }}</div>
-    <div *ngIf="contentItem ? contentItem.type : ''" class="type">Type: {{ contentItem ? contentItem.type : "" }}</div>
-    <div *ngIf="contentItem ? contentItem.tags : ''" class="tags">Tags: {{ contentItem ? contentItem.tags : "" }}</div>
-    <div *ngIf="contentItem ? contentItem.imgURL : ''" class="imgURL">
-        <img [src]="contentItem ? contentItem.imgURL : ''" (click)="clicked()">
+
+    <div appHoverEffect styleType="underline" *ngIf="contentItem ? contentItem.type : ''" class="type">
+        Type: {{ contentItem ? contentItem.type : "" }}
+    </div>
+    
+    <div *ngIf="contentItem ? contentItem.tags : ''" class="tags">
+        <ul>
+            <span *ngFor="let tag of contentItem?.tags">
+                <li appHoverEffect styleType="bold"#{{ tag }}></li>
+            </span>
+        </ul>
+    </div>
+    <div *ngIf="contentItem" class="imgURL">
+        <img [src]="contentItem.imgURL != null ? contentItem.imgURL : ''" (click)="clicked()">
     </div>
 </div>
