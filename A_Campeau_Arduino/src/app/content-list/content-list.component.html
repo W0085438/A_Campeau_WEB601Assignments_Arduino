@@ -4,7 +4,7 @@
     <div class="creator">Created by: {{ contentItem ? contentItem.creator : "" }}</div>
 
     <div appHoverEffect styleType="underline" *ngIf="contentItem ? contentItem.type : ''" class="type">
-        Type: {{ contentItem ? contentItem.type : "" }}
+        Type: {{ contentItem ? contentItem.type : '' }}
     </div>
     
     <div *ngIf="contentItem" class="imgURL">
