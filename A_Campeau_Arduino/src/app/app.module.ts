@@ -10,7 +10,6 @@ import { HoverEffectDirective } from './hover-effect.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    ContentCardComponent,
     ContentListComponent,
     ContentFilterPipe,
     HoverEffectDirective
