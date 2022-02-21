@@ -23,8 +23,8 @@ export class HoverEffectDirective implements OnInit {
     this.elem.nativeElement.style.fontWeight = "normal";
   }
 
-  private hoverEffectFunction() {
+  /* private hoverEffectFunction() {
     this.elem.nativeElement.style.textDecoration = "underline";
-  }
+  } */
 
 }
