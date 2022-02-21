@@ -6,16 +6,16 @@
     <div appHoverEffect styleType="underline" *ngIf="contentItem ? contentItem.type : ''" class="type">
         Type: {{ contentItem ? contentItem.type : '' }}
     </div>
-    
-    <div *ngIf="contentItem" class="imgURL">
-        <img [src]="contentItem.imgURL != null ? contentItem.imgURL : 'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png'" (click)="clicked()">
-    </div>
 
-    <div *ngIf="contentItem ? contentItem.tags : ''" class="tags">
+    <div *ngIf="contentItem?.tags" class="tags">
         <ul>
             <span *ngFor="let tag of contentItem?.tags">
                 <li appHoverEffect styleType="bold"#{{ tag }}></li>
             </span>
         </ul>
+    </div>
+    
+    <div *ngIf="contentItem" class="imgURL">
+        <img [src]="contentItem.imgURL != null ? contentItem.imgURL : 'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png'" (click)="clicked()">
     </div>
 </div>
