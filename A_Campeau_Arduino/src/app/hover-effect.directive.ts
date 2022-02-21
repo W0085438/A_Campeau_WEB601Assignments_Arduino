@@ -1,13 +1,16 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appHoverEffect]'
 })
-export class HoverEffectDirective {
+export class HoverEffectDirective implements OnInit {
   @Input() styleType?: string;
 
   constructor(private elem: ElementRef) { 
     this.elem.nativeElement.style.cursor = "pointer";
+  }
+  ngOnInit(): void {
+      
   }
 
   @HostListener('mouseover') onHover(typeElem: any){
