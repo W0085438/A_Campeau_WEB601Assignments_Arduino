@@ -7,14 +7,15 @@
         Type: {{ contentItem ? contentItem.type : "" }}
     </div>
     
+    <div *ngIf="contentItem" class="imgURL">
+        <img [src]="contentItem.imgURL != null ? contentItem.imgURL : 'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png'" (click)="clicked()">
+    </div>
+
     <div *ngIf="contentItem ? contentItem.tags : ''" class="tags">
         <ul>
             <span *ngFor="let tag of contentItem?.tags">
                 <li appHoverEffect styleType="bold"#{{ tag }}></li>
             </span>
         </ul>
-    </div>
-    <div *ngIf="contentItem" class="imgURL">
-        <img [src]="contentItem.imgURL != null ? contentItem.imgURL : 'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png'" (click)="clicked()">
     </div>
 </div>
