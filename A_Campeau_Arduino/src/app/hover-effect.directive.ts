@@ -14,13 +14,17 @@ export class HoverEffectDirective implements OnInit {
   }
 
   @HostListener('mouseover') onHover(typeElem: any){
-    this.elem.nativeElement.style.textDecoration = this.styleType ?? "none";
+    this.elem.nativeElement.style.textDecoration = this.styleType ?? "underline";
     this.elem.nativeElement.style.fontWeight = this.styleType ?? "normal";
   }
 
   @HostListener('mouseover') offHover(typeElem: any){
     this.elem.nativeElement.style.textDecoration = "none";
     this.elem.nativeElement.style.fontWeight = "normal";
+  }
+
+  private hoverEffectFunction() {
+    this.elem.nativeElement.style.textDecoration = "underline";
   }
 
 }
