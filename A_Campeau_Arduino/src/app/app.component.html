@@ -6,6 +6,10 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="create">
+  <app-create-content (newBoardEvent)="addBoardToList($event)"></app-create-content>
+  <div *ngIf="failureMsg != ''" [innerHTML]="failureMsg" class="failure"></div>
+</div>
 <div class="container">
   <div class="searchbox">
     <input type="text" #search>
