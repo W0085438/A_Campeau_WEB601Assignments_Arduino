@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@angular/core": "^13.3.4"
+    "@angular/core": "^13.3.4",
+    "@angular/platform-browser": "^13.3.4"
   }
 }
