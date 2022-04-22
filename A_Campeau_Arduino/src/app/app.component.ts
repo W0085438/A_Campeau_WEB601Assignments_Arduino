@@ -8,6 +8,7 @@ import { Content } from './helper-files/content-interface';
 })
 export class AppComponent {
   title = 'About Arduino (working title)';
+  failureMsg = "";
   contentList: Content[];
 
   constructor(){
@@ -80,5 +81,45 @@ export class AppComponent {
       }
     }
         return "Sorry, there are no items with that title!";
+  }
+
+  addBoardToList(newBoardFromChild: Content) {
+    console.log(this.failureMsg);
+    let promise = new Promise((success, failure) => {
+      if ((
+        newBoardFromChild.id ||
+        newBoardFromChild.title ||
+        newBoardFromChild.description ||
+        newBoardFromChild.creator != "")) {
+          this.failureMsg = "";
+          success(
+            `A new Arduino board ahs been added with the following attributes:
+              Title: ${newBoardFromChild.title},
+              ID: ${newBoardFromChild.id},
+              Description: ${newBoardFromChild.description},
+              Creator: ${newBoardFromChild.creator},
+              Image URL: ${newBoardFromChild.imgURL},
+              Type: ${newBoardFromChild.type},
+              Tags: ${newBoardFromChild.tags}`);
+        } else {
+          failure("An error has occurred while adding new board. PLease ensure that all fields have been filled in.");
+          this.failureMsg = "An error has occurred while adding new board. PLease ensure that all fields have been filled in.";
+        }
+    });
+
+    promise
+      .then((successMsg) => console.log(successMsg))
+      .catch((errorMsg) => this.failureMsg = errorMsg);
+
+    if(this.failureMsg != "") {
+      return;
+
+    } else {
+      console.log('Previous board list: ', this.contentList);
+      this.contentList.push(newBoardFromChild);
+      this.contentList = [...this.contentList];
+      console.log("Board to be added to list: ", newBoardFromChild);
+      console.log("New board list: ", this.contentList);
+    }
   }
 }
