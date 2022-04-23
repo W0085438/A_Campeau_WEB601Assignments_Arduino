@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   }
 
   getBoards(): void {
-    this.arduinoService.getBoardsObs().subscribe(boardArray => this.boardList = boardArray);
+    this.arduinoService.getBoards().subscribe(boardArray => this.boardList = boardArray);
     this.arduinoService.getIndividualBoard(3).subscribe(individualBoard => this.filteredBoard = individualBoard);
   }
 
