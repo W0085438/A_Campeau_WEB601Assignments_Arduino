@@ -7,13 +7,13 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<div class="container">
+<!-- <div class="container">
   <div class="searchbox">
     <input type="text" #search>
     <button (click)="search.value = filter(search.value, contentList)">SEARCH!</button>
     <div [ngClass]="{'true': search.value == 'There is a card with that title.', 
                     'false': search.value == 'There is no card with that title.'}" [innerHTML]="search.value"></div>
-  </div>
+  </div> -->
 
   <div class="filter">
     <input type="number" #num placeholder="Enter a board ID:" required min="0" [max]="boardList.length - 1">
