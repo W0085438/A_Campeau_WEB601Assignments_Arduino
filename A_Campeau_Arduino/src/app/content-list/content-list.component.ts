@@ -8,9 +8,18 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
-  @Input() contentItem?: Content;
-  constructor() { }
-
+  @Input() contentItem: Content;
+  constructor() {
+    this.contentItem = {
+      id: 0,
+      title: "",
+      description: "",
+      creator: "",
+      imgURL: "",
+      type: "",
+      tags: []
+   }
+  }
   ngOnInit(): void {
   }
 
