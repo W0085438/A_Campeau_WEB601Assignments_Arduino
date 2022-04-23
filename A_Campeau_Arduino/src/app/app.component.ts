@@ -21,8 +21,27 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getBoards();
+  }
+
+  getBoards(): void {
     this.arduinoService.getBoardsObs().subscribe(boardArray => this.boardList = boardArray);
     this.arduinoService.getIndividualBoard(3).subscribe(individualBoard => this.filteredBoard = individualBoard);
+  }
+
+  addNewBoard(newBoardFromChild: Content): void {
+    this.arduinoService.addBoard(newBoardFromChild).subscribe(newBoardFromServer => {
+      console.log('New board from server', newBoardFromServer);
+      this.boardList.push(newBoardFromServer);
+      this.boardList = [...this.boardList];
+    });
+  }
+
+  updateBoard(contentItem: Content): void {
+    this.arduinoService.updateBoard(contentItem).subscribe(() => {
+      console.log("Board has been updated");
+      this.getBoards();
+    })
   }
 
   getBoard(id: string) {
