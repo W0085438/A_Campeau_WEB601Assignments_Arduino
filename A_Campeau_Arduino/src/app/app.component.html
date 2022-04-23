@@ -25,7 +25,7 @@
     </app-messages>
   </div>
 
-  <div class="boardId" *ngIf="individualBoard.length">
+  <div class="boardId" *ngIf="getBoard.length">
     <app-content-list *ngFor="let item of (getBoard); index as i; first as oneBoard;" [contentItem]="item" [class.oneBoard]="oneBoard">
     </app-content-list>
   </div>
