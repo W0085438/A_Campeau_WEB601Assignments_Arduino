@@ -1,0 +1,30 @@
+:host{
+    form{
+      display: flex;
+      flex-direction: column;
+      width: 15%;
+      margin: 10px;
+    }
+  
+    form input{
+      margin-bottom: 5px;
+    }
+  
+    button{
+      font-weight: bold;
+      outline: none;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      background: rgba(0,255,0,.5);
+      padding: 10px;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+  
+    input{
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  
