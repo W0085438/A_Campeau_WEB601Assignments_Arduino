@@ -28,7 +28,10 @@ export class AppComponent implements OnInit {
   getBoard(id: string) {
     let newId = parseInt(id);
     if(isNaN(newId)){
-      return this.messageService.add(`A number between 0 and ${this.boardList.length - 1}`);
+      return this.messageService.add(`Only a number will be accepted. A number between 0 and ${this.boardList.length - 1} must be entered.`);
+    }
+      if(newId < 0 || newId > this.boardList.length - 1) {
+        return this.messageService.add(`A number between 0 and ${this.boardList.length - 1} must be entered.`);
     } else {
       this.messageService.clear();
       return this.arduinoService.getIndividualBoard(newId).subscribe(individualBoard => this.filteredBoard = individualBoard);
