@@ -18,10 +18,10 @@
   <div class="modify">
     <app-modify-content (newBoardEvent)="addNewBoard($event)" (updateBoardEvent)="updateBoard($event)">
     </app-modify-content>
-  </div>
+  </div><br><br>
   
   <div class="filter">
-    <input type="number" #num placeholder="Enter a board ID:" required min="0" [max]="boardList.length - 1">
+    <input type="number" size="20" #num placeholder="Enter a board ID:" required min="0" [max]="boardList.length - 1">
     <button (click)="getBoard(num.value)">Filter</button>
   </div>
 
