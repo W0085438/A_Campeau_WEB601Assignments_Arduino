@@ -17,24 +17,24 @@ export class ModifyContentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addBoard(title: string, desc: string, creator: string, imgUrl: string, type: string, tags: string) {
+  addBoard(title: string, desc: string, creator: string, imgurl: string, type: string, tags: string) {
     this.content = {
       title: title,
       description: desc,
       creator: creator,
-      imgURL: imgUrl,
+      imgURL: imgurl,
       type: type,
       tags: tags.split(', ')
     }
     this.newBoardEvent.emit(this.content);
   }
 
-  updateBoard(title: string, desc: string, creator: string, imgUrl: string, type: string, tags: string) {
+  updateBoard(title: string, desc: string, creator: string, imgurl: string, type: string, tags: string) {
     this.content = {
       title: title,
       description: desc,
       creator: creator,
-      imgURL: imgUrl,
+      imgURL: imgurl,
       type: type,
       tags: tags.split(',')
     }
