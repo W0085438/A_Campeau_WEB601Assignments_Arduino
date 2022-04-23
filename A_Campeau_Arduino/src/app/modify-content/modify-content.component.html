@@ -1,0 +1,21 @@
+<form action="#" class="newBoard">
+    <label for="title" >Title</label>
+    <input id="title" name="title" type="text" #title>
+    <br/>
+    <label for="description">Description</label>
+    <input type="text" id="description" name="description" #desc>
+    <br/>
+    <label for="creator">Creator</label>
+    <input type="text" id="creator" name="creator" #creator>
+    <br/>
+    <label for="imgURL">Image URL</label>
+    <input type="text" id="imgURL" name="imgURL" #imgurl>
+    <br/>
+    <label for="type">Type</label>
+    <input type="text" id="type" name="type" #type>
+    <br/>
+    <label for="tags">Tags</label>
+    <input type="text" id="tags" name="tags" #tags>
+
+  <button (click)="addBoard(title.value, description.value, creator.value, imgUrl.value, type.value, tags.value)" type="reset">Add New Board</button>
+</form>
