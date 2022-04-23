@@ -3,8 +3,7 @@
     width: 50%;
     margin: 0 auto;
     text-align: center;
-    background: rgba(60, 179, 113, .5);
-    border-radius: 10px;
+    background: rgb(100, 109, 113);
   
     .message{
       padding: 10px;
@@ -30,6 +29,6 @@
     }
   
     .message button:hover{
-      background: rgba(60, 179, 113, 1);
+      background: rgba(100, 100, 113);
     }
   }
