@@ -1,5 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Content } from './helper-files/content-interface';
+import { ArduinoServiceService } from './arduino-service.service';
+import { MessageService } from './message.service';
+import { boardList } from './helper-files/board-list'
 
 @Component({
   selector: 'app-root',
