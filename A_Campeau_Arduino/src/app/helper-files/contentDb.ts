@@ -1,4 +1,6 @@
-[
+import { Content } from "./content-interface"
+
+export const BOARDLIST: Content[] = [
     {
       id: 0,
       title: "UNO",
