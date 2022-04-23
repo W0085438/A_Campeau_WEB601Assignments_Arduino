@@ -15,6 +15,11 @@
                     'false': search.value == 'There is no card with that title.'}" [innerHTML]="search.value"></div>
   </div> -->
 
+  <div class="modify">
+    <app-modify-content (newBoardEvent)="addNewBoard($event)" (updateBoardEvent)="updateBoard($event)">
+    </app-modify-content>
+  </div>
+  
   <div class="filter">
     <input type="number" #num placeholder="Enter a board ID:" required min="0" [max]="boardList.length - 1">
     <button (click)="getBoard(num.value)">Filter</button>
