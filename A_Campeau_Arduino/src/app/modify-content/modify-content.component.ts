@@ -17,10 +17,10 @@ export class ModifyContentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addBoard(title: string, description: string, creator: string, imgUrl: string, type: string, tags: string) {
+  addBoard(title: string, desc: string, creator: string, imgUrl: string, type: string, tags: string) {
     this.content = {
       title: title,
-      description: description,
+      description: desc,
       creator: creator,
       imgURL: imgUrl,
       type: type,
@@ -29,10 +29,10 @@ export class ModifyContentComponent implements OnInit {
     this.newBoardEvent.emit(this.content);
   }
 
-  updateBoard(title: string, description: string, creator: string, imgUrl: string, type: string, tags: string) {
+  updateBoard(title: string, desc: string, creator: string, imgUrl: string, type: string, tags: string) {
     this.content = {
       title: title,
-      description: description,
+      description: desc,
       creator: creator,
       imgURL: imgUrl,
       type: type,
