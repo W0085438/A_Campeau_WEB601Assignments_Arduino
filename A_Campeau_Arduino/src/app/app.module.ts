@@ -10,6 +10,7 @@ import { ModifyContentComponent } from './modify-content/modify-content.componen
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
+import { BoardDetailComponent } from './board-detail/board-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
     ContentFilterPipe,
     HoverEffectDirective,
     AppMessagesComponent,
-    ModifyContentComponent
+    ModifyContentComponent,
+    BoardDetailComponent
   ],
   imports: [
     BrowserModule,
