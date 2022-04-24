@@ -21,7 +21,10 @@
   </div><br><br>
   
   <div class="filter">
-    <input type="number" size="20" #num placeholder="Enter a board ID:" required min="0" [max]="boardList.length - 1">
+    <mat-form-field>
+      <mat-label>Board ID</mat-label>
+      <input type="number" size="20" #num placeholder="Enter a board ID:" required min="0" [max]="boardList.length - 1">
+    </mat-form-field>
     <button (click)="getBoard(num.value)">Filter</button>
   </div>
 
