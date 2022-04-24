@@ -71,7 +71,7 @@ export class ModifyContent {
     this.dialogRef.close();
   }
 
-  newHobby(title: string, desc: string, creator: string, imgurl: string, type: string, tags: string) {
+  addBoard(title: string, desc: string, creator: string, imgurl: string, type: string, tags: string) {
     this.content = {
       title: title,
       description: desc,
