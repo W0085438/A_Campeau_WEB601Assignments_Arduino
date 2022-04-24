@@ -19,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContentFilterPipe,
     HoverEffectDirective,
     AppMessagesComponent,
-    ModifyContentComponent
+    ModifyContentComponent,
+    
   ],
   imports: [
     BrowserModule,
