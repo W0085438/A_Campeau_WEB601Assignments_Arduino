@@ -35,21 +35,28 @@
     </app-content-list>
   </div>
 
-  <div class="micro">
-    <app-content-list *ngFor="let item of (boardList | contentFilter: 'Microcontroller'); index as i; first as isFirst" [contentItem]="item" 
-    [class.isFirst]="isFirst"></app-content-list>
-  </div>
+<mat-tab-group>
+  <mat-tab label="micro">
+    <div class="micro">
+      <app-content-list *ngFor="let item of (boardList | contentFilter: 'Microcontroller'); index as i; first as isFirst" [contentItem]="item" 
+      [class.isFirst]="isFirst"></app-content-list>
+    </div>
+  </mat-tab>
 
-  <div class="microplus">
-    <app-content-list *ngFor="let item of (boardList | contentFilter: 'Microcontroller+'); index as i; first as isFirst" [contentItem]="item" 
-    [class.isFirst]="isFirst"></app-content-list>
-  </div>
+  <mat-tab label="microplus">
+    <div class="microplus">
+      <app-content-list *ngFor="let item of (boardList | contentFilter: 'Microcontroller+'); index as i; first as isFirst" [contentItem]="item" 
+      [class.isFirst]="isFirst"></app-content-list>
+    </div>
+  </mat-tab>
 
-  <div class="empty">
-    <app-content-list *ngFor="let item of (boardList | contentFilter); index as i; first as isFirst" [contentItem]="item" 
-    [class.isFirst]="isFirst"></app-content-list>
-  </div>
-
+  <mat-tab label="empty">
+    <div class="empty">
+      <app-content-list *ngFor="let item of (boardList | contentFilter); index as i; first as isFirst" [contentItem]="item" 
+      [class.isFirst]="isFirst"></app-content-list>
+    </div>
+  </mat-tab>
+</mat-tab-group>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
