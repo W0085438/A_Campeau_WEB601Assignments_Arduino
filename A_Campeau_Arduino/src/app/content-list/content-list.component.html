@@ -1,5 +1,8 @@
-<div class="container">
-    <div class="title"><header>{{ contentItem ? contentItem.title : "" }}</header></div>
+<mat-card class="container board-{{contentItem>.id}}">
+    <mat-card-header>
+        <mat-card-title>{{ contentItem ? contentItem.title : "" }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
     <div class="desc">{{ contentItem ? contentItem.description : "" }}</div>
     <div class="creator">Created by: {{ contentItem ? contentItem.creator : "" }}</div>
 
@@ -8,14 +11,11 @@
     </div>
 
     <div *ngIf="contentItem?.tags" class="tags">
-        <ul>
-            <span *ngFor="let tag of contentItem?.tags">
-                <li appHoverEffect styleType="bold">#{{ tag }}</li>
-            </span>
-        </ul>
+        <mat-chip-list aria-label="board tags" *ngFor="let tag of contentItem?.tags">
+            <mat-chip>#{{tag}}</mat-chip>
+        </mat-chip-list>
     </div>
-    
-    <div *ngIf="contentItem" class="imgURL">
-        <img [src]="contentItem.imgURL != null ? contentItem.imgURL : 'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png'" (click)="clicked()">
-    </div>
-</div>
+</mat-card-content>
+   
+    <img mat-card-image [src]="contentItem.imgURL != null ? contentItem.imgURL : 'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png'" (click)="clicked()">
+</mat-card>
