@@ -1,0 +1,29 @@
+<form action="#" class="addBoard">
+    <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput #title>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput #desc>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Creator</mat-label>
+        <input matInput #creator>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Image URL</mat-label>
+        <input matInput #imgurl>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Type</mat-label>
+        <input matInput #type>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Tags</mat-label>
+        <input matInput #tags>
+    </mat-form-field>
+
+  <button (click)="addBoard(title.value, desc.value, creator.value, imgurl.value, type.value, tags.value)" mat-raised-button color="primary">ADD NEW BOARD</button>
+  <button mat-raised-button color="accent" (click)="onNoClick()">Close</button>
+</form>
