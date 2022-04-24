@@ -60,7 +60,7 @@ export class ModifyContentComponent implements OnInit {
 @Component({
   selector: 'modify-content',
   templateUrl: './modify-content.html',
-  styleUrls: ['./modify-content-component.scss']
+  styleUrls: ['./modify-content.component.scss']
 })
 export class ModifyContent {
   closed = new EventEmitter();
